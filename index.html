@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,12 +13,43 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- style sheet -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
     <title>Full Stack Eats</title>
 </head>
-<body>
 
-    <!-- Insert Code Here -->
-    
-<script src="./assets/javascript/app.js"></script>  
+<body>
+    <div class="jumbotron fluid font-weight-bold">
+        <h1>Full Stack Eats</h1>
+        <h3>your personal dinner party planner</h3>
+    </div>
+    <div class="container">
+        <div class="col-sm-3">
+            <form id="form">
+                <label for="foodItemInput">Type in a dish you want to serve</label>
+                <br>
+                <input type="text" id="foodItemInput">
+                <input id="addFoodItem" type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="row" id="imageBank">
+            <div class="col-sm-8">
+                <div id="foodImages"></div>
+            </div>
+        </div>
+        <div class="row" id="nutrition">
+            <div class="col-sm-8">
+                <div id="nutritionalValue"></div>
+            </div>
+        </div>
+        <div class="row" id="preparation">
+            <div class="col-sm-8">
+                <div id="ingredientList"></div>
+                <div id="recipe"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="./assets/javascript/app.js"></script>
 </body>
+
 </html>
