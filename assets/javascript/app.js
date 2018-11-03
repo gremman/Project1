@@ -1,8 +1,3 @@
-// Initialize Firebase
-
-//   <!-- Firebase JavaScript Link -->
-
-<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
 
 // Initialize Firebase
 var config = {
@@ -15,4 +10,24 @@ var config = {
 };
 firebase.initializeApp(config);
 
+//var database = firebase.database();
+
+
+$(document).ready(function () {
+
+  $(document).on("click", "recipeInstructions", function () {
+    $("#recipeInstructions").empty();
+
+    //var recipe = $(this).attr("data-type");
+    var queryURL = "https://www.food2fork.com/api/get?key=49cc1738002fe76fe04ce3c453546e88";
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function (response) {
+      console.log(response);
+    });
+
+  })
+});
 
