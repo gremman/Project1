@@ -1,6 +1,6 @@
 # Project1
 
-Project Title: Fullstack Eats: The Front and Back-end of Cooking
+Project Title: Fullstack Eats: The beauty and brains of cooking
 
 Team members: Eli Bresler, Glory Avina, Rudy Rodriguez
 
