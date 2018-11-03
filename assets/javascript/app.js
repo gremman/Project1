@@ -12,8 +12,6 @@ var config = {
   messagingSenderId: "994105971812"
 };
 firebase.initializeApp(config);
-<<<<<<< HEAD
-=======
 
 // GROCERY LIST
 //  Adding grocery list when you click submit button
@@ -70,5 +68,3 @@ $(document).on("click", "#addFoodItem", function(e) {
 
       });
     });
-
->>>>>>> fdc1f9e... add latest files with working api data grab
