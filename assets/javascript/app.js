@@ -1,11 +1,4 @@
 // Initialize Firebase
-<<<<<<< HEAD
-=======
-
-//   <!-- Firebase JavaScript Link -->
-
-// Initialize Firebase
->>>>>>> 7f0fa85b0acd2668a8005007c2872e7bace03a52
 var config = {
   apiKey: "AIzaSyB3cDJ2hSq1v4MQkdBGTg9Mcdd3XAwcTj4",
   authDomain: "fullstackeats.firebaseapp.com",
@@ -16,59 +9,21 @@ var config = {
 };
 firebase.initializeApp(config);
 
-<<<<<<< HEAD
- // Adding food images when submit button is clicked
-$(document).on("click", "#addFoodItem", function (e) {
-
-  // Prevents refreshing the form (default box) after we submit to the page
-  e.preventDefault();
-  $("#foodImages").empty();
-  $("#addFoodItem").removeClass("active");
-  $(this).addClass("active");
-
-  // create variable for food item input
-  var foodItem = $("#foodItemInput").val().trim();
-
-  // Constructing a queryURL for the food images with contextual webseach API
-  var queryURL = "https://contextualwebsearch-websearch-v1.p.mashape.com/api/Search/ImageSearchAPI?autoCorrect=true&count=3&q=" 
-  + foodItem + "&api_key=qXDvBYCbBzmshEGKNakJSw7HJfwap1MPOYJjsn4Jfmm67nP9ud";
-
-  $.ajax({
-      url: queryURL,
-      method: "GET"
-  })
-
-  //After data comes back from the request for food image
-  .then(function (response) {
-    console.log(queryURL);
-    console.log(response);
-  
-  var results = response.data; 
-  
-
-
-  });
-
-
-
-
-});
-=======
 // GROCERY LIST
 //  Adding grocery list when you click submit button
 $(document).on("click", "#addFoodItem", function(e) {
   // prevents refreshing the form (default bx) after we submit to the page
   e.preventDefault();
   console.log("test");
+  var search = $("#foodItemInput").val().trim();
+  console.log(search);
   $("#ingredients").empty();
   $("#addFoodItem").removeClass("active");
   $(this).addClass("active");
 
   // Constructing a queryURL for the grocery list
-  // q = user input
-  // var q =
 
-  var queryURL = "https://www.food2fork.com/api/search?key=" + "49cc1738002fe76fe04ce3c453546e88" + "&q=" + "lasagna" + "&page=1";
+  var queryURL = "https://www.food2fork.com/api/search?key=" + "1fa04e31f9fa0c050b53d71088cd2683" + "&q=" + search + "&page=1";
 
   // Performing an AJAX request with the queryURL for recipe
   $.ajax({
@@ -79,13 +34,17 @@ $(document).on("click", "#addFoodItem", function(e) {
   // After data comes back from the request for image
     .then(function (response) {
     var results = JSON.parse(response);
-    var image = results.recipes[0].image_url;
+    var recipeURL = results.recipes[0].source_url;
     var recipeId = results.recipes[0].recipe_id;
     console.log(results);
-    console.log(image);
+    console.log(recipeURL);
     console.log(recipeId);
+
   
-    var queryURL = "https://www.food2fork.com/api/get?key=49cc1738002fe76fe04ce3c453546e88&rId=" + recipeId;
+    var queryURL = "https://www.food2fork.com/api/get?key=" + "1fa04e31f9fa0c050b53d71088cd2683" + "&rId=" + recipeId;
+
+    var q = "Recipe: " + recipeURL
+    $("#recipes").append(q);
 
     // 2nd query url AJAX request for ingredients 
     $.ajax({
@@ -98,15 +57,23 @@ $(document).on("click", "#addFoodItem", function(e) {
       var ingredientList = ingResults.recipe.ingredients;
     console.log("--------------");
     console.log(ingredientList);
-  });
+  
 
-// Display ingredients in HTML as a list 
-    var grocery = $("<div class=\"style\">");
-    var p = $("<p>").text("Groceries you need to buy: " + ingredientList);
+// Display ingredients in HTML as a list
+    // use a for loop to go through the array of ingredients
+    var list = $("<ul>");
 
-    grocery.append(p);
-    $("#ingredients").prepend(grocery);
+    for (var i = 0; i < ingredientList.length; i++) {
+      var item = $("<li>");
 
+    // take each item (child) of the array and append it to build a list (li tag)
+
+    item.text(ingredientList[i]);
+      list.append(item);
+      $("#ingredients").append(list);
+    }
+
+
+        });
       });
     });
->>>>>>> 7f0fa85b0acd2668a8005007c2872e7bace03a52
