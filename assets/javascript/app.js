@@ -1,11 +1,9 @@
 // Initialize Firebase
-<<<<<<< HEAD
-=======
 
 //   <!-- Firebase JavaScript Link -->
 
 // Initialize Firebase
->>>>>>> 7f0fa85b0acd2668a8005007c2872e7bace03a52
+// >>>>>>> 7f0fa85b0acd2668a8005007c2872e7bace03a52
 var config = {
   apiKey: "AIzaSyB3cDJ2hSq1v4MQkdBGTg9Mcdd3XAwcTj4",
   authDomain: "fullstackeats.firebaseapp.com",
@@ -16,44 +14,6 @@ var config = {
 };
 firebase.initializeApp(config);
 
-<<<<<<< HEAD
- // Adding food images when submit button is clicked
-$(document).on("click", "#addFoodItem", function (e) {
-
-  // Prevents refreshing the form (default box) after we submit to the page
-  e.preventDefault();
-  $("#foodImages").empty();
-  $("#addFoodItem").removeClass("active");
-  $(this).addClass("active");
-
-  // create variable for food item input
-  var foodItem = $("#foodItemInput").val().trim();
-
-  // Constructing a queryURL for the food images with contextual webseach API
-  var queryURL = "https://contextualwebsearch-websearch-v1.p.mashape.com/api/Search/ImageSearchAPI?autoCorrect=true&count=3&q=" 
-  + foodItem + "&api_key=qXDvBYCbBzmshEGKNakJSw7HJfwap1MPOYJjsn4Jfmm67nP9ud";
-
-  $.ajax({
-      url: queryURL,
-      method: "GET"
-  })
-
-  //After data comes back from the request for food image
-  .then(function (response) {
-    console.log(queryURL);
-    console.log(response);
-  
-  var results = response.data; 
-  
-
-
-  });
-
-
-
-
-});
-=======
 // GROCERY LIST
 //  Adding grocery list when you click submit button
 $(document).on("click", "#addFoodItem", function(e) {
@@ -107,6 +67,12 @@ $(document).on("click", "#addFoodItem", function(e) {
     grocery.append(p);
     $("#ingredients").prepend(grocery);
 
+
+
+
+
+    
+
       });
     });
->>>>>>> 7f0fa85b0acd2668a8005007c2872e7bace03a52
+
