@@ -20,41 +20,51 @@
 <body>
     <div class="jumbotron fluid font-weight-bold">
         <h1>Full Stack Eats</h1>
+        <h4>Chic & Tasty</h4>
     </div>
     <div class="container">
-        <div class="col-sm-12">
-            <form id="form">
-                <label for="foodItemInput">Type in a dish you want to serve</label>
-                <br>
-                <input type="text" id="foodItemInput">
-                <input id="addFoodItem" type="submit" value="Submit">
-            </form>
-        </div>
         <div>
+            <p id="title"><strong>For a Chic Look</strong></p>
             <script>
-                (function() {
-                  var cx = '007685258059432664048:uafmqz_elps';
-                  var gcse = document.createElement('script');
-                  gcse.type = 'text/javascript';
-                  gcse.async = true;
-                  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                  var s = document.getElementsByTagName('script')[0];
-                  s.parentNode.insertBefore(gcse, s);
+                (function () {
+                    var cx = '007685258059432664048:uafmqz_elps';
+                    var gcse = document.createElement('script');
+                    gcse.type = 'text/javascript';
+                    gcse.async = true;
+                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(gcse, s);
                 })();
-              </script>
-              <gcse:search></gcse:search>
+            </script>
+            <gcse:search></gcse:search>
         </div>
-        <div class="row" id="shoppingList">
-            <div class="col-sm-8">
-                <div id="ingredients"></div>
-            </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="container2 col-sm-12">
+        <form id="form">
+            <label id="title" for="foodItemInput">Make a Tasty Dish</label>
+            <br>
+            <input type="text" id="foodItemInput">
+            <input id="addFoodItem" type="submit" value="Submit">
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row" id="recipe">
+        <div class="col-sm-8" id="recipes">
         </div>
-        <div class="row" id="recipe">
-            <div class="col-sm-8">
-                <div id="recipeInstructions"></div>
-                <div id="recipe"></div>
-            </div>
+    <br>
+    <div class="row" id="shoppingList">
+        <div class="col-sm-8">
+            <p id="recipe"></p>
+            <div id="ingredients"></div>
         </div>
+    </div>
+    </div>
     </div>
     </div>
     <script src="./assets/javascript/app.js"></script>
