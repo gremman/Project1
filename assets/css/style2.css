@@ -1,0 +1,32 @@
+body {
+    background-color: black;
+
+}.navbar {
+    background-color: black;
+    color: white;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+.navbar-brand {
+    font-size: 35px;
+    margin-left: 10%;
+}
+
+.form-inline {
+    margin-right: 10%;
+}
+
+.row {
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+.col-xs-4 {
+    padding: 15px;
+}
+.btnGateway{
+    font-size: 30px;
+}
