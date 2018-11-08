@@ -79,14 +79,6 @@ $(document).on("click", "#addFoodItem", function (e) {
             $("#ingredients").html("<br>" + "Ingredients" + "<br>" + "<br>");
             $("#ingredients").append(list);
           }
-
-
-
-
-
-
-
-
         });
     });
 
