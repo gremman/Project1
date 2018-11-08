@@ -19,10 +19,6 @@ h3 {
     margin-right: 10%;
 }
 
-.btn {
-    background-color: grey;
-}
-
 .row {
     max-width: 1450px;
     margin: 0 auto;
@@ -30,4 +26,7 @@ h3 {
 
 .col-xs-4 {
     padding: 15px;
+}
+.btnGateway{
+    font-size: 30px;
 }
