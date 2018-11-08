@@ -79,5 +79,15 @@ h3 {
     padding: 15px;
 }
 .btnGateway{
-    font-size: 30px;
+	font-size: 30px;
+	width: 100%;
+}
+
+#carouselExampleIndicators{
+	width: 100%;
+}
+@media only screen and (max-width: 600px) {
+    .btnGateway {
+    	font-size: 20px;
+    }
 }
