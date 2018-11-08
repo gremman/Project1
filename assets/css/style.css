@@ -22,6 +22,7 @@ body {
 
 .container2 {
 	text-align: center;
+	width: 100%;
 }
 
 #addFoodItem {
@@ -30,25 +31,40 @@ body {
 	border: 15px solid rgb(252, 238, 255);
 }
 
+#form {
+	width: 100%;
+	position: center;
+}
 #foodItemInput {
-	width: 70%;
 	border: 15px solid rgb(252, 238, 255);
+	width: 75%;
 }
 
 #shoppingList {
 	color: white;
 	width: 70%;
+	position: center;
 }
 
 #recipe {
 	color: white;
 	text-align: center;
-	width: 70%;
+	width: 100%;
 }
 
-.col-sm-8 {
-	margin-left: 70%;
-	margin-top: 20px;
+#recipes {
+	margin-left: 18%;
+	font-size: 16px;
+	color: rgb(255, 230, 0);
+	width: 100%;
+}
+
+#ingredients {
+	position: center;
+	width: 100%;
+	margin-left: 30%;
+	border: 3px dotted white;
+	list-style-type: none;
 }
 
 .navbar {
@@ -79,5 +95,5 @@ h3 {
     padding: 15px;
 }
 .btnGateway{
-    font-size: 30px;
+    font-size: 20px;
 }
