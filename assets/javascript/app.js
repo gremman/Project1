@@ -28,7 +28,7 @@ $(document).on("click", "#addFoodItem", function (e) {
 
   // Constructing a queryURL for the grocery list
 
-  var queryURL = "https://www.food2fork.com/api/search?key=" + "1fa04e31f9fa0c050b53d71088cd2683" + "&q=" + search + "&page=1";
+  var queryURL = "https://www.food2fork.com/api/search?key=" + "095c40864128adb6acdb6133369759e3" + "&q=" + search + "&page=1";
 
   // Performing an AJAX request with the queryURL for recipe
   $.ajax({
@@ -46,10 +46,11 @@ $(document).on("click", "#addFoodItem", function (e) {
       console.log(recipeId);
 
 
-      var queryURL = "https://www.food2fork.com/api/get?key=" + "1fa04e31f9fa0c050b53d71088cd2683" + "&rId=" + recipeId;
+      var queryURL = "https://www.food2fork.com/api/get?key=" + "095c40864128adb6acdb6133369759e3" + "&rId=" + recipeId;
+      
+      $("#recipes").html('<a href=' + recipeURL + ' target="_blank">Tasty Recipe Here</a>');
 
-      var q = "Recipe: " + recipeURL
-      $("#recipes").append(q);
+      $("#recipes a").addClass("btn text-light btn-outline-light btn-sm btnGateway");
 
       // 2nd query url AJAX request for ingredients 
       $.ajax({
@@ -75,6 +76,7 @@ $(document).on("click", "#addFoodItem", function (e) {
 
             item.text(ingredientList[i]);
             list.append(item);
+            $("#ingredients").html("<br>" + "Ingredients" + "<br>" + "<br>");
             $("#ingredients").append(list);
           }
         });
