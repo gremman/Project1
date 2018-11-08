@@ -28,7 +28,7 @@ $(document).on("click", "#addFoodItem", function (e) {
 
   // Constructing a queryURL for the grocery list
 
-  var queryURL = "https://www.food2fork.com/api/search?key=" + "095c40864128adb6acdb6133369759e3" + "&q=" + search + "&page=1";
+  var queryURL = "https://www.food2fork.com/api/search?key=" + "49cc1738002fe76fe04ce3c453546e88" + "&q=" + search + "&page=1";
 
   // Performing an AJAX request with the queryURL for recipe
   $.ajax({
@@ -46,7 +46,7 @@ $(document).on("click", "#addFoodItem", function (e) {
       console.log(recipeId);
 
 
-      var queryURL = "https://www.food2fork.com/api/get?key=" + "095c40864128adb6acdb6133369759e3" + "&rId=" + recipeId;
+      var queryURL = "https://www.food2fork.com/api/get?key=" + "49cc1738002fe76fe04ce3c453546e88" + "&rId=" + recipeId;
       
       $("#recipes").html('<a href=' + recipeURL + ' target="_blank">Tasty Recipe Here</a>');
 
